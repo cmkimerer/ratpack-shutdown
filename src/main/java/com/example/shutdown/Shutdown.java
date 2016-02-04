@@ -22,6 +22,7 @@ public class Shutdown {
           }
         }).handlers(chain ->
             chain.all(ctx -> {
+              System.out.println("Shutdown is being called");
               wrapper.stop();
               ctx.render("");
             })
